@@ -30,7 +30,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
       <Navbar />
-      <main  className = "flex-grow max-w-4xl mx-auto w-full px-6 py-12">
+      <main  className = "flex-grow max-w-4xl mx-16 w-full px-6 py-12">
       {children}
       </main>
       <Footer />

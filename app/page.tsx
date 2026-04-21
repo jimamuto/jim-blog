@@ -1,4 +1,5 @@
 import PreviewFile from "@/app/components/PreviewFile";
+import Link from "next/link";
 export default function page (){
   
   const files = [
@@ -8,15 +9,23 @@ export default function page (){
   ];
 
 return(
-<div> <h1>Jim's Developer Journey</h1>
-<p> I am a He/him living in Nairobi Kenya and in this blog is where i express myself</p>
-{files.map((file)=>(
-  <PreviewFile 
-  key={file.id}
-  date={file.date}
-  description={file.description}
-  />
-  ))}
+<div className="flex flex-col"> 
+  <h1 className="text-5xl font-bold">Jim's Developer Journey</h1>
+  <p className="text-gray-500 text-3xl mb-8"> I am a He/him living in Nairobi Kenya and in this blog is w   here i express myself</p>
+  <span className="flex gap-16 mb-10">
+  <Link href="/about"> About Me</Link>
+  <Link href="/Portfolio"> Portfolio</Link>
+  <Link href="/Writing"> Writing </Link>
+  </span>
+  {files.map((file)=>(
+    <PreviewFile 
+    key={file.id}
+    title={file.title}
+    date={file.date}
+    description={file.description}
+    />
+    ))
+  }
   </div>
 );
 }

@@ -1,11 +1,16 @@
 "use client"
 import Link from 'next/link';
+import { FaTwitter,FaGithub,FaInstagram } from "react-icons/fa";
+import Avatar from 'react-avatar';
 const Navbar =()=>{
 return(
-    <nav className= "flex gap-16 justify-center">
-    <Link href='/'>Home</Link>
-    <Link href='/about'> About me</Link>
-    <Link href='/'>Porfolio</Link>
+    <nav className="flex gap-16">
+    <Avatar name="Jim Amuto" round={true} size={50}/>
+    <h1> Jim Amuto</h1>
+    <p> Software Architect</p>
+    <FaTwitter />
+    <FaGithub />
+    <FaInstagram />
     </nav> 
 
 )}
