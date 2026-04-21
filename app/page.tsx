@@ -1,32 +1,31 @@
 import PreviewFile from "@/app/components/PreviewFile";
 import Link from "next/link";
-export default function page (){
-  
-  const files = [
-    {id: 1, date: "April 20", title: "Minimax", description: "How to use minimax in coding" },
-    { id: 2, date: "April 21", title: "Developer Journey", description: "How i have improved in developing" },
-    { id: 3, date: "April 22", title: "Homelab", description: "Take a peep on my homelabbing journey" },
-  ];
+import Image from "next/image";
 
-return(
-<div className="flex flex-col"> 
+export default function page (){
+  return(
+<main> 
   <h1 className="text-5xl font-bold">Jim's Developer Journey</h1>
   <p className="text-gray-500 text-3xl mb-8"> I am a He/him living in Nairobi Kenya and in this blog is w   here i express myself</p>
-  <span className="flex gap-16 mb-10">
-  <Link href="/about"> About Me</Link>
-  <Link href="/Portfolio"> Portfolio</Link>
-  <Link href="/Writing"> Writing </Link>
-  </span>
-  {files.map((file)=>(
-    <PreviewFile 
-    key={file.id}
-    title={file.title}
-    date={file.date}
-    description={file.description}
-    />
-    ))
-  }
+  <div className="flex gap-16 mb-10 justify-center">
+    <Link href="/writing"> Start reading </Link>
   </div>
+      <section>
+      <h1>Featured Post</h1>
+      <Image src="/featured.jpg" alt="featured post" width={24} height={24} />
+        <p>feed post</p>
+      </section>
+
+      <section>
+      <h1>Categories</h1></section>
+
+      <section>
+      <h1>About the author</h1></section>
+
+      <section>
+      <h1>Newsletter Signup</h1></section>
+
+  </main>
 );
 }
 

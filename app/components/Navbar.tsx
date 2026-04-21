@@ -8,6 +8,7 @@ return(
     <Avatar name="Jim Amuto" round={true} size={50}/>
     <h1> Jim Amuto</h1>
     <p> Software Architect</p>
+      <Link href="/about">About Me</Link>
     <FaTwitter />
     <FaGithub />
     <FaInstagram />
